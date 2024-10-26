@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events In Js</title>
+</head>
+<body>
+
+    <div class="img">
+
+    <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y29kaW5nfGVufDB8fDB8fHww " id="1" height="200px" style="margin: 10px;" />
+
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMAyktw55cPVLD1QkMap7vJprYPNlQ9sEBX9DkR-3UtgheORbX8n3Ir3UMsfdjg6DRAW0&usqp=CAU " height="200px" style="margin: 10px;" id="2"/>
+
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRG45EAOzk9wppjU9ABAJLWNzEZ4CyU0OrGGFI4IuCpZuui6kJGFgvMjs0TGTwsaf-chS4&usqp=CAU" height="200px" style="margin: 10px;" id="3"/>
+
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIDWFBzcAFctnH6NKCvrRiDEXLpp_dvkElFoXyPLBgmlcpGTpTFiFY7yzI4rt94uEpIfY&usqp=CAU" height="200px" style="margin: 10px;"/>
+
+    </div>
+    
+    <script>
+      
+    //  document.getElementById('1').onclick = function(){
+      //  alert("hii")
+      // }
+
+     // attachEvent()
+     // jQuery - on
+     
+     // event objects
+     // tagName
+     // type , timestamp, defaultPrevented
+     // target, toElement, srcElement, currentTarget,
+     // cilentX, clientY, screenX, screenY,
+     // altkey, ctelkey, shiftkey, keyCode
+
+    // console.log(e.type);
+ // console.log(e.timeStamp);
+ // console.log(e.defaultPrevented);
+ // console.log(e.target);
+
+ /*
+ document.querySelector('.img').addEventListener('click', function(e){
+    console.log('clicked inside the url');
+ },false)
+
+   document.getElementById('2').addEventListener('click',(e)=>{
+       console.log("img Clicked");
+   },false)
+   */
+
+   document.querySelector('.img').addEventListener('click',(e)=>{
+    console.log(e.target.tagName);
+    // let removeIt = e.target.parentNode
+    // if (e.target.tagName === 'IMG') {
+  //      let removeIt = e.target.tagName
+  //  removeIt.remove()
+   // }
+   let removeIt = e.target
+    removeIt.remove()
+   },false)
+
+    </script>
+</body>
+</html>

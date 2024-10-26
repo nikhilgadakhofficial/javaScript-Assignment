@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Projects-3</title>
+    <style>
+        .btn{
+            display: flex;
+            justify-self: center;
+        }
+        .btn-2{
+            width: 200px;
+            height: 30px;
+            background-color: rgb(252, 148, 12);
+            border-radius: 10px;
+            margin: 15px;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="btn">
+    <h1>Your Local Time</h1>
+    <div class="btn-2" id="clock"></div>
+    </div>
+</body>
+<script>
+    const clock = document.getElementById('clock')
+    console.log(clock);
+    let date = new Date()
+    console.log(date.toLocaleTimeString());
+    setInterval(function(){
+        let date = new Date()
+        // console.log(date.toLocaleTimeString());
+
+        clock.innerHTML = date.toLocaleTimeString()
+    },1000)
+</script>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Async and setTimeout and  clearTimeout</title>
+</head>
+
+<body>
+    <h1>Nikhil Gadakh</h1>
+    <button id="stop">Stop</button>
+
+    <script>
+
+        // setTimeout( function(){
+        //  console.log("hi");
+        //  },2000)
+
+        const sayNikhil = function () {
+            console.log('NIKHIL');
+        }
+        setTimeout(sayNikhil, 2000)
+
+
+        const change = function () {
+            document.querySelector('h1').innerHTML = "Hi JS "
+        }
+        const chnageMe = setTimeout(change, 3000)
+
+        document.querySelector('#stop').addEventListener('click', () => {
+            clearTimeout(chnageMe)
+        })
+
+
+
+    </script>
+</body>
+
+</html>

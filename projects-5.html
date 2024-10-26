@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects-5</title>
+</head>
+
+<body>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+
+    <script>
+        let randmoColor = function () {
+            let hex = '0123456789ABCDEF'
+            let color = "#"
+            for (let i = 0; i < 6; i++) {
+                color += hex[Math.floor(Math.random() * 16)]
+            }
+            return color
+        }
+        console.log(randmoColor());
+
+        let changeId;
+
+        const startChangColor = function () {
+
+            changeId = setInterval(changeColor, 1000)
+
+            function changeColor() {
+                document.body.style.backgroundColor = randmoColor()
+            }
+        }
+
+        const stopChangColor = function () {
+            clearInterval(changeId)
+        }
+
+
+        document.querySelector('#start').addEventListener('click', startChangColor)
+
+        document.querySelector('#stop').addEventListener('click', stopChangColor)
+    </script>
+</body>
+
+</html>

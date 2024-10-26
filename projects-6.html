@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects-6</title>
+    <style>
+        .key{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="insert">
+  <div class="key"> Press the key and Watch magick</div>
+    </div>
+    <script>
+      const insert =  document.querySelector('#insert')
+        window.addEventListener('keydown',(e)=>{
+          insert.innerHTML = ` <div> 
+
+            <p>key : ${e.key}</p> 
+            <p>key Code  : ${e.keyCode}</p> 
+            <p>code  : ${e.code}</p> 
+            </div>`
+        })
+    </script>
+</body>
+</html>

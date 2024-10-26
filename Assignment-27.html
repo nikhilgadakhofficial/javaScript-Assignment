@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>DOM </title>
+    <style>
+        .p{
+            background-color:brown ;
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+
+        <h4 class="NN">Hi MK</h4>
+          
+        <p id="hading">Dom Larnig</p>
+
+        <h1>(logical OR) This operator</h1>
+        <h2>(logical OR) This operator </h2>
+        <h2>(logical OR) This operator</h2>
+        <h2>(logical OR) This operator </h2>
+
+          <ul>
+            <li>One</li>
+            <li>Two</li>
+            <li>Three</li>
+            <li>Four</li>
+          </ul>
+          
+      
+    </div>
+    <script>
+        const teamp = document.getElementById('hading')
+        teamp.textContent = 'Hii Nikhil'
+
+        const teamp1 = document.querySelector('h1')
+        teamp1.innerHTML = "NK"
+
+        const teamp2 = document.querySelectorAll('h2')
+         teamp2.forEach( (h)=>{
+            return h.textContent = "Nikhil Gadakh"
+         })
+
+         const teamp3 = document.getElementsByClassName("NN")
+
+         const array = Array.from(teamp3)
+
+         array[0].innerHTML = "kkk"
+
+         
+
+
+
+
+
+
+        
+    </script>
+</body>
+</html>
